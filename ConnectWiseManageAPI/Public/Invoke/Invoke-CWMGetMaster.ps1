@@ -5,7 +5,7 @@
         [string]$Endpoint
     )
 
-    if ($Arguments.id) { $Endpoint = Join-Url $Endpoint $id }
+    if ($Arguments.id) { $Endpoint = Join-Url $Endpoint $arguments.id }
 
     if ($Arguments.count.IsPresent) { $Endpoint = Join-Url $Endpoint '/count' }
 
