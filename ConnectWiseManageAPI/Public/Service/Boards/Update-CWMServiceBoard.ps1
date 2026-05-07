@@ -1,4 +1,4 @@
-function Set-CWMServiceBoard {
+function Update-CWMServiceBoard {
     [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSShouldProcess', '', Justification = 'Used by sub-function')]
     [CmdletBinding(SupportsShouldProcess, ConfirmImpact='Medium')]
     param(
