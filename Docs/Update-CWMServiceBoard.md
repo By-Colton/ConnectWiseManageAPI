@@ -1,29 +1,37 @@
-<#
-.SYNOPSIS
+# Update-CWMServiceBoard
+
+## SYNOPSIS
 Updates a service board.
 
-.DESCRIPTION
+## DESCRIPTION
 Updates a single property on a ConnectWise Manage service board using a PATCH operation.
 
-.PARAMETER id
+## PARAMETERS
+
+### -id
 The service board ID.
 
-.PARAMETER Operation
-The patch operation to perform. Allowed values are replace, add, and remove.
+### -Operation
+The patch operation to perform. Accepted values are `replace`, `add`, and `remove`.
 
-.PARAMETER Path
+### -Path
 The service board property to update.
 
-.PARAMETER Value
+### -Value
 The value to apply to the specified path.
 
-.EXAMPLE
-Update-CWMServiceBoard -id 1 -Operation replace -Path 'name' -Value 'Help Desk'
+## EXAMPLES
+
+### Example 1
+```powershell
+Update-CWMServiceBoard -id 1 -Operation 'replace' -Path 'name' -Value 'Help Desk'
+```
 
 Renames service board ID 1 to Help Desk.
 
-.EXAMPLE
+### Example 2
+```powershell
 Update-CWMServiceBoard -id 1 -Operation replace -Path 'inactiveFlag' -Value 'True'
+```
 
 Marks service board ID 1 as inactive.
-#>
